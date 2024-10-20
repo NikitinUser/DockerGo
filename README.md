@@ -1,3 +1,4 @@
 # DockerGo
 
-1. sudo make up
+1. make env
+2. sudo make up || sudo make compose

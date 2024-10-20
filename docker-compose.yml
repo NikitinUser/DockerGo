@@ -32,7 +32,7 @@ services:
     restart: always
     image: rabbitmq:3.8.2-management
     ports:
-      - "15673:15672"
+      - "15672:15672"
     volumes:
       - rabbitmq-data:/var/lib/rabbitmq
     environment:
