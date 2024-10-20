@@ -7,9 +7,10 @@ services:
       args:
         - UID=${UID}
     restart: always
+    ports:
+      - 8080:8080
     networks:
       - general-network
-      - local
   service-db:
     image: postgres:11.3
     restart: always
@@ -31,7 +32,7 @@ services:
     restart: always
     image: rabbitmq:3.8.2-management
     ports:
-      - "15672:15672"
+      - "15673:15672"
     volumes:
       - rabbitmq-data:/var/lib/rabbitmq
     environment:
@@ -72,6 +73,4 @@ networks:
   general-network:
     name: general-network
     attachable: true
-  local:
-    external: true
 
